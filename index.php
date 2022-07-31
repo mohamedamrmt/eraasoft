@@ -349,55 +349,62 @@ $s = [20,30,40];
 
 
 
-
-$email = "w@2.com";
-$pass = "222";
-
-$error = [];
-
-if(isset($_POST['email'])){
-
-    if($_POST['email'] == ""){
-        $error[] = "email is required";
-    }
-
-
-    if($_POST['password'] == ""){
-        $error[] = "password is required";
-    }
-
-
-    if(count($error) == 0){
-        if($_POST['email'] == $email && $_POST['password'] == $pass){
-            echo "welcome";
-        }else{
-            echo "plz try again";
-        }
-    }
-}
-
-echo "<ul>";
-foreach ($error as $item) {
-    echo "<li style='color:red'>$item</li>";
-}
-
-echo "</ul>";
-
-
+//
+//$email = "w@2.com";
+//$pass = "222";
+//
+//$error = [];
+//
+//if(isset($_POST['email'])){
+//
+//    if($_POST['email'] == ""){
+//        $error[] = "email is required";
+//    }
+//
+//
+//    if($_POST['password'] == ""){
+//        $error[] = "password is required";
+//    }
+//
+//
+//    if(count($error) == 0){
+//        if($_POST['email'] == $email && $_POST['password'] == $pass){
+//            echo "welcome";
+//        }else{
+//            echo "plz try again";
+//        }
+//    }
+//}
+//
+//echo "<ul>";
+//foreach ($error as $item) {
+//    echo "<li style='color:red'>$item</li>";
+//}
+//
+//echo "</ul>";
 
 
-
+//session_start();
 
 
 
+//print_r($_REQUEST);
+
+
+//$name = "mohamed";
+
+
+//print_r($_SESSION);
+
+
+//$_COOKIE['']
 
 
 
 
+setcookie('login','mohamed',time() + (60 * 60 *24) , "/");
 
-
-
-
+//print_r($_COOKIE);
 
 
 
@@ -413,9 +420,9 @@ echo "</ul>";
     <title>Title</title>
 </head>
 <body>
-<form action="index.php" method="post">
-    <input type="text" name="email">
-    <input type="text" name="password">
+<form action="index.php?x=20" method="post">
+    <input type="text" name="x">
+    <input type="text" name="y">
     <input type="submit" >
 </form>
 </body>
