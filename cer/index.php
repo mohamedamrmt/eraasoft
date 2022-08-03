@@ -1,13 +1,12 @@
 <?php
 
+// include 
+// require 
+// include_once
+//  require_once
 
-$list_of_students =  explode(",",$_POST['students']);
+// include "generator.php";
 
-$cer_content= file_get_contents("certificate.html");
+// call($_POST['students'],$_POST['course'],"certificate.html");
 
-for($i=0;$i<count($list_of_students);$i++){
-    fopen($list_of_students[$i].".html","w");
-    $newstring =  str_replace("name",$list_of_students[$i],$cer_content);
 
-    file_put_contents($list_of_students[$i].".html",$newstring);
-}
